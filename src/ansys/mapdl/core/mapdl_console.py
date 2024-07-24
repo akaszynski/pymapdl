@@ -119,6 +119,7 @@ class MapdlConsole(MapdlBase):
         self._auto_continue = True
         self._continue_on_error = False
         self._process = None
+        self._session_id_: Optional[str] = None
         self._launch(start_parm)
         super().__init__(
             loglevel=loglevel,
@@ -128,7 +129,6 @@ class MapdlConsole(MapdlBase):
             **start_parm,
         )
         self._mode = "console"
-        self._session_id_: Optional[str] = None
 
     def _launch(self, start_parm):
         """Connect to MAPDL process using pexpect"""
