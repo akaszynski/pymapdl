@@ -25,10 +25,10 @@
 Used when launching Mapdl via pexpect on Linux when <= 17.0
 """
 
-from typing import Optional
 import os
 import re
 import time
+from typing import Optional
 
 from ansys.mapdl.core.errors import MapdlExitedError, MapdlRuntimeError
 from ansys.mapdl.core.mapdl import MapdlBase
