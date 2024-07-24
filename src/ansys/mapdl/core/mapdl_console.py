@@ -24,6 +24,8 @@
 
 Used when launching Mapdl via pexpect on Linux when <= 17.0
 """
+
+from typing import Optional
 import os
 import re
 import time
@@ -126,6 +128,7 @@ class MapdlConsole(MapdlBase):
             **start_parm,
         )
         self._mode = "console"
+        self._session_id_: Optional[str] = None
 
     def _launch(self, start_parm):
         """Connect to MAPDL process using pexpect"""
